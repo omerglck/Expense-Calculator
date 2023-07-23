@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">
+        <h1 class="heading">Harcama Hesaplayıcı</h1>
+    </div>
+    
+    <div class="container">
+        <!--! Karşılama Alanı  -->
+        <h3 class="greet">
+            Hoşgeldin,
+            <input type="text" placeholder="isminizi giriniz" id="nameTitle">
+        </h3>
+        
+        <!--! Form Alanı -->
+        <form>
+            <!--todo Form Top  -->
+            
+            <div class="double">
+                <div class="expens-area">
+                    <label>Harcama</label>
+                    <input type="text" id="name-input">
+                </div>
+                <div class="expens-area">
+                    <label>Fiyat</label>
+                    <input type="number" id="price-input">
+                </div>
+            </div>
+            <div id="warning"></div>
+            <!--todo Form Bottom -->
+            <div class="double">
+               <div class="form-check-area">
+                    <input type="checkbox" id="status-check">
+                    <label for="status-check">Ödendi</label>
+               </div>
+               <div class="buttons">
+                <button id="clear" class="add-btn clear">Temizle</button>
+               <button class="add-btn" id="add-btn">Ekle</button>
+               </div>
+            </div>
+        </form>
+
+  
+
+        <!--! Toplama Alanı -->
+        <div class="sum">
+            Toplam Harcama <span id="sum-info">0</span>&#8378;
+        </div>
+
+        <!--! Filtreleme Alanı -->
+        <select>
+            <option value="all">Hepsi</option>
+            <option value="payed">Ödenenler</option>
+            <option value="not-payed">Ödenmeyenler</option>
+        </select>
+
+        <!--! Harcamalar Listesi  -->
+        <!-- Harcama Kartı -->
+        <div id="list"></div>
+        <!-- Harcama Kartı Son-->
+
+    </div>
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

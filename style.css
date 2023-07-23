@@ -1,0 +1,373 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=VT323&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    font-family: 'VT323', monospace;
+    background: linear-gradient(135deg, #87CEEB, #FA8072);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+}
+
+
+
+
+/* Title Animasyon Alanı */
+.title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    height: 100px;
+    position: relative;
+    background: linear-gradient(135deg, #87CEEB, #FA8072);
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #004b58;
+    box-shadow: 1px 1px 15px rgb(0, 164, 240);
+    transition: 0.5s;
+
+    
+}
+.title:hover{
+    transition: 0.5s;
+    box-shadow: 1px 1px 15px rgb(94, 0, 131);
+}
+.title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    border-top: 2px solid #008183;
+    border-right: 2px solid #008183;
+    animation: border-top-right 3s infinite alternate;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    border-bottom: 2px solid #008183;
+    border-left: 2px solid #008183;
+    animation: border-top-left 3s infinite alternate;
+}
+@keyframes border-top-right{
+    
+    0%{
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+    25%{
+        opacity: 0.5;
+        width: 0px;
+        height: 0px;
+    }
+    50%{
+        opacity: 1;
+        width: 300px;
+        height: 0px;
+    }
+    100%{
+        opacity: 1;
+        width: 300px;
+        height: 95px;
+    }
+}
+@keyframes border-top-left{
+    0%{
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+
+    }
+    50%{
+        opacity: 0.5;
+        width: 0px;
+        height: 0px;
+    }
+    75%{
+        opacity: 1;
+        width: 300px;
+        height: 0px;
+    }
+    100%{
+        opacity: 1;
+        width: 300px;
+        height: 95px;
+    }
+}
+
+
+
+
+
+
+
+
+
+.title .heading{
+    text-shadow: 2px 2px 20px #70009c85;
+    letter-spacing: 1px;
+   
+}
+
+.container{
+    min-width: 60vw;
+    max-width: 80vw;
+    height: 80vh;
+    background: #153541;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 20px #B7D7D8;
+    color: #c6fdfffd;
+    letter-spacing: 2px;
+    margin-top: -20px;
+
+}
+.greet{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left:60px;
+}
+.greet input{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 20px;
+    font-weight: 400;
+    color:#c6fdfffd;
+}
+.greet input::placeholder{
+    color:#c6fdff34;
+}
+form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap:10px;
+}
+.form-check-area{
+    display: flex;
+    margin-left: 60px;
+    gap:10px;
+}
+.double{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 100%;
+   font-size: 20px;
+   gap: 40px;
+}
+.double .expens-area{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin:10px 0 30px;
+}
+
+.double .expens-area input{
+    padding: 10px 20px;
+    border: none;
+    outline: 1px solid #87CEEB;
+    border-radius: 5px;
+    background: #C4FBFD;
+    color: #153541;
+    font-weight: 600;
+    width: 300px;
+}
+.double .add-btn{
+    
+    background: #C4FBFD;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 30px;
+    cursor: pointer;
+    transition: .3s;
+    font-family: 'VT323', monospace;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    margin-right: 60px;
+    gap:10px;
+}
+.double .add-btn:hover{
+    box-shadow: 2px 2px 10px #C4FBFD;
+    scale: .95;
+    transition: .2s;
+}
+
+.clear{
+    background-color: rgb(133, 0, 0) !important;
+    color:#C4FBFD;
+    padding: 8px 30px;
+}
+.clear:hover{
+    box-shadow: 2px 2px 10px rgb(235, 0, 0) !important;
+    scale: .95;
+    transition: .2s;
+}
+
+
+/*! Bildirim Kutusu */
+#warning{
+    display: none;
+    background: rgb(227, 243, 0);
+    padding: 10px;
+    color: #004b58;
+    gap: 10px;
+    border-radius:10px;
+}
+#warning img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+#list{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+   gap:10px;
+   overflow:auto;
+   padding: 10px;
+}
+.expense{
+    display: flex;
+    background: #C4FBFD;
+    color: #153541;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: box-shadow .3s;
+    
+}
+.expense:hover{
+    box-shadow: 2px 2px 15px #7afcfc;
+}
+
+.expense .price{
+   color:red;
+}
+.expense .date{
+
+}
+.expense .btns{
+  
+}
+.expense .btns img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+}
+
+/* Ödenmiş Olan Eleman */
+.payed{
+    opacity: 0.7;
+}
+.payed .name{
+    text-decoration: line-through;
+}
+.payed .price{
+    color:green;
+}
+.payed:hover{
+    box-shadow: 0px 0px 10px #fcfcfc inset;
+
+}
+
+
+/* toplam alanı */
+.sum{
+  background-color:#005A5B ;
+  padding: 10px 30px;
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  font-size: 25px;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#sum-info{
+    color:rgb(133, 0, 0);
+}
+
+/* Filtreleme Alanı */
+select{
+    margin:0 auto;
+    background-color: #005A5B;
+    color: #C4FBFD;
+    padding: 5px 10px;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+
+
+@media screen and (max-width:1100px) {
+   .sum{
+    width: 500px;
+   }
+}
+@media screen and (max-width:850px) {
+    .double .expens-area input{
+        width: 200px;
+    }
+    .buttons{
+        margin-right: 15px;
+    }
+    .form-check-area{
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width:700px) {
+   .sum{
+    width: 350px;
+   } 
+   .double .expens-area input{
+    width: 100px;
+   }
+   .buttons button{
+    width: 70px;
+   }
+  
+}
